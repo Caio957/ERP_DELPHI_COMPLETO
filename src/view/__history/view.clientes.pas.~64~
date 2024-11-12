@@ -1,0 +1,65 @@
+unit view.clientes;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  view.base.listas,
+  Data.DB,
+  Vcl.Grids,
+  Vcl.DBGrids,
+  Vcl.StdCtrls,
+  Vcl.WinXCtrls,
+  Vcl.WinXPanels,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+  Service.cadastro,
+  Vcl.Mask,
+  Vcl.DBCtrls;
+
+type
+  TViewClientes = class(TViewBaseLista2)
+    pnlTituloCadCliente: TPanel;
+    lblTituloCadastro: TLabel;
+    Label1: TLabel;
+    edtPES_CODIGO: TDBEdit;
+    Label2: TLabel;
+    edtPES_CNPJ: TDBEdit;
+    Label3: TLabel;
+    edtPES_RAZAO: TDBEdit;
+    Label4: TLabel;
+    edtPES_FANTASIA: TDBEdit;
+    Label5: TLabel;
+    edtPES_IERG: TDBEdit;
+    Label6: TLabel;
+    edtPES_TELEFONE: TDBEdit;
+    Label7: TLabel;
+    edtPES_OBSERVACAO: TDBEdit;
+  private
+    { Private declarations }
+  public
+
+
+  end;
+
+var
+  ViewClientes: TViewClientes;
+
+implementation
+
+{$R *.dfm}
+
+
+
+
+
+
+end.

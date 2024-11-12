@@ -1,0 +1,58 @@
+unit Service.cadastro;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Classes,
+  Service.conexao,
+  FireDAC.Stan.Intf,
+  FireDAC.Stan.Option,
+  FireDAC.Stan.Param,
+  FireDAC.Stan.Error,
+  FireDAC.DatS,
+  FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf,
+  FireDAC.Stan.Async,
+  FireDAC.DApt,
+  Data.DB,
+  FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  TServiceCadastro = class(TDataModule)
+    QRY_Pessoas: TFDQuery;
+    QRY_PessoasPES_CODIGO: TIntegerField;
+    QRY_PessoasPES_RAZAO: TStringField;
+    QRY_PessoasPES_FANTASIA: TStringField;
+    QRY_PessoasPES_TELEFONE: TStringField;
+    QRY_PessoasPES_CNPJ: TStringField;
+    QRY_PessoasPES_OBSERVACAO: TStringField;
+    QRY_PessoasPES_TIPOPESSOA: TIntegerField;
+    QRY_Endereco: TFDQuery;
+    QRY_EnderecoEND_CODIGO: TIntegerField;
+    QRY_EnderecoEND_PESSOA: TIntegerField;
+    QRY_EnderecoEND_CEP: TStringField;
+    QRY_EnderecoEND_CIDADE: TStringField;
+    QRY_EnderecoEND_ENDERECO: TStringField;
+    QRY_EnderecoEND_BAIRRO: TStringField;
+    QRY_EnderecoEND_OBSERVACAO: TStringField;
+    QRY_EnderecoEND_NUMERO: TStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ServiceCadastro: TServiceCadastro;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+
+
+{$R *.dfm}
+
+end.

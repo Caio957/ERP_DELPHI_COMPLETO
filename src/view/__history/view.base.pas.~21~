@@ -1,0 +1,45 @@
+unit view.base;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TViewBase = class(TForm)
+
+  private
+    { Private declarations }
+  public
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+  end;
+
+var
+  ViewBase: TViewBase;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewBase.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+
+  if Key = VK_ESCAPE then
+    Self.close;
+
+
+  if Key = VK_RETURN then
+    perform(WM_NEXTDLGCTL,0,0);
+
+
+end;
+                  //parei na aula 7 parte 1
+end.

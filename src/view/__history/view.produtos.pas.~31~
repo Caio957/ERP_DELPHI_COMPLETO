@@ -1,0 +1,87 @@
+unit view.produtos;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  view.base.listas,
+  Data.DB,
+  Vcl.Grids,
+  Vcl.DBGrids,
+  Vcl.StdCtrls,
+  Vcl.WinXCtrls,
+  Vcl.WinXPanels,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+  FMTBcd, Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TViewProdutos = class(TViewBaseListas)
+    DS_Produto2: TDataSource;
+    pnlDetalhe: TPanel;
+    DBG_detalhe: TDBGrid;
+    pnlCadTitProdutos: TPanel;
+    lblTituloCadastro: TLabel;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    procedure FormShow(Sender: TObject);
+    procedure DS_dadosDataChange(Sender: TObject; Field: TField);
+    procedure btnNovoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewProdutos: TViewProdutos;
+
+implementation
+
+{$R *.dfm}
+
+uses Service.cadastro, Provider.constants;
+
+procedure TViewProdutos.btnNovoClick(Sender: TObject);
+begin
+  inherited;
+
+  ServiceCadastro.QRY_produto1PR1_GRUPO.AsInteger := 1;
+  ServiceCadastro.QRY_produto1PR1_SUBGRUPO.AsInteger := 1;
+
+
+end;
+
+procedure TViewProdutos.DS_dadosDataChange(Sender: TObject; Field: TField);
+begin
+  inherited;
+  GET_Produto_Detalhe(ServiceCadastro.QRY_produto1PR1_CODIGO.AsInteger);
+end;
+
+procedure TViewProdutos.FormShow(Sender: TObject);
+begin     //SHOW
+  inherited;
+
+    GET_PRODUTOS;
+
+end;
+
+end.

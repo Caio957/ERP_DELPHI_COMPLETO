@@ -1,0 +1,153 @@
+inherited ViewProdutos: TViewProdutos
+  Caption = 'ViewProdutos'
+  StyleElements = [seFont, seClient, seBorder]
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited lblTitulo: TLabel
+      Caption = 'Produtos'
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitWidth = 77
+    end
+    inherited pnlIcone: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited pnlFechar: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+  end
+  inherited pnlRodape: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+  end
+  inherited PanelLinhaFundo: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited CardPanel_Lista: TCardPanel
+      StyleElements = [seFont, seClient, seBorder]
+      inherited Card_pesquisa: TCard
+        StyleElements = [seFont, seClient, seBorder]
+        inherited pnlTItuloPesquisa: TPanel
+          StyleElements = [seFont, seClient, seBorder]
+          inherited lblTituloPesquisa: TLabel
+            StyleElements = [seFont, seClient, seBorder]
+          end
+          inherited EdtPesquisa: TSearchBox
+            StyleElements = [seFont, seClient, seBorder]
+          end
+        end
+        inherited dbg_Dados: TDBGrid
+          Height = 215
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'PR1_CODIGO'
+              Title.Caption = 'C'#243'digo'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PR1_NOMECOMPLETO'
+              Title.Caption = 'Nome completo'
+              Width = 289
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PR1_NOMEPOPULAR'
+              Title.Caption = 'Nome popular'
+              Width = 287
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PR1_CODIGOBARRA'
+              Title.Caption = 'C'#243'digo Barras'
+              Width = 173
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PR1_REFERENCIA'
+              Title.Caption = 'Refer'#234'ncias'
+              Width = 190
+              Visible = True
+            end>
+        end
+        object pnlDetalhe: TPanel
+          Left = 0
+          Top = 325
+          Width = 1022
+          Height = 150
+          Align = alBottom
+          BevelOuter = bvNone
+          TabOrder = 2
+          ExplicitTop = 320
+          object DBG_detalhe: TDBGrid
+            AlignWithMargins = True
+            Left = 5
+            Top = 5
+            Width = 1012
+            Height = 140
+            Cursor = crHandPoint
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Align = alClient
+            BorderStyle = bsNone
+            DataSource = DS_Produto2
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -12
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'PR2_FILIAL'
+                Title.Caption = 'Filial'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PR2_CUSTOINI'
+                Title.Caption = 'Custo inicial'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PR2_VENDAVISTA'
+                Title.Caption = 'Venda '#224' vista'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PR2_VENDAPRAZO'
+                Title.Caption = 'Venda a prazo'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PR2_ESTOQUE'
+                Title.Caption = 'Estoque'
+                Visible = True
+              end>
+          end
+        end
+      end
+      inherited Card_cadastro: TCard
+        StyleElements = [seFont, seClient, seBorder]
+      end
+    end
+  end
+  inherited DS_dados: TDataSource
+    DataSet = ServiceCadastro.QRY_produto1
+    OnDataChange = DS_dadosDataChange
+  end
+  object DS_Produto2: TDataSource
+    DataSet = ServiceCadastro.QRY_produto2
+    Left = 960
+    Top = 153
+  end
+end

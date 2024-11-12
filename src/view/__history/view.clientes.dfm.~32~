@@ -1,0 +1,302 @@
+inherited ViewClientes: TViewClientes
+  Caption = 'ViewClientes'
+  ClientHeight = 499
+  StyleElements = [seFont, seClient, seBorder]
+  ExplicitHeight = 499
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited lblTitulo: TLabel
+      Caption = 'Clientes'
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitWidth = 68
+    end
+    inherited pnlIcone: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited pnlFechar: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+  end
+  inherited pnlRodape: TPanel
+    Top = 459
+    StyleElements = [seFont, seClient, seBorder]
+    ExplicitTop = 459
+    inherited btnNovo: TSpeedButton
+      OnClick = btnNovoClick
+    end
+    inherited btnEditar: TSpeedButton
+      OnClick = btnEditarClick
+      ExplicitLeft = 512
+      ExplicitTop = 6
+    end
+    inherited btnCancelar: TSpeedButton
+      OnClick = btnCancelarClick
+    end
+    inherited btnExcluir: TSpeedButton
+      OnClick = btnExcluirClick
+    end
+    inherited btnSalvar: TSpeedButton
+      OnClick = btnSalvarClick
+    end
+  end
+  inherited PanelLinhaFundo: TPanel
+    Height = 424
+    StyleElements = [seFont, seClient, seBorder]
+    ExplicitHeight = 424
+    inherited CardPanel_Lista: TCardPanel
+      Height = 424
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitHeight = 424
+      inherited Card_pesquisa: TCard
+        Height = 424
+        StyleElements = [seFont, seClient, seBorder]
+        ExplicitHeight = 424
+        inherited pnlTItuloPesquisa: TPanel
+          StyleElements = [seFont, seClient, seBorder]
+          inherited lblTituloPesquisa: TLabel
+            StyleElements = [seFont, seClient, seBorder]
+          end
+          inherited EdtPesquisa: TSearchBox
+            StyleElements = [seFont, seClient, seBorder]
+          end
+        end
+        inherited dbg_Dados: TDBGrid
+          Height = 314
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'PES_CODIGO'
+              Title.Caption = 'C'#243'digo'
+              Width = 50
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_RAZAO'
+              Title.Caption = 'Nome do cliente'
+              Width = 262
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_TELEFONE'
+              Title.Caption = 'Telefone'
+              Width = 191
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_CNPJ'
+              Title.Caption = 'Cnpj/Cpf'
+              Width = 281
+              Visible = True
+            end>
+        end
+      end
+      inherited Card_cadastro: TCard
+        Height = 424
+        Caption = ''
+        StyleElements = [seFont, seClient, seBorder]
+        ExplicitHeight = 424
+        object Label1: TLabel
+          Left = 24
+          Top = 80
+          Width = 54
+          Height = 21
+          Caption = 'C'#243'digo'
+          FocusControl = edtPES_CODIGO
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label2: TLabel
+          Left = 110
+          Top = 80
+          Width = 70
+          Height = 21
+          Caption = 'CNPJ/CPF'
+          FocusControl = edtPES_CNPJ
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 296
+          Top = 80
+          Width = 90
+          Height = 21
+          Caption = 'Raz'#227'o Social'
+          FocusControl = edtPES_RAZAO
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label4: TLabel
+          Left = 702
+          Top = 80
+          Width = 106
+          Height = 21
+          Caption = 'Nome Fantasia'
+          FocusControl = edtPES_FANTASIA
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 24
+          Top = 144
+          Width = 34
+          Height = 21
+          Caption = 'IERG'
+          FocusControl = edtPES_IERG
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label6: TLabel
+          Left = 230
+          Top = 144
+          Width = 63
+          Height = 21
+          Caption = 'Telefone'
+          FocusControl = edtPES_TELEFONE
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label7: TLabel
+          Left = 24
+          Top = 208
+          Width = 87
+          Height = 21
+          Caption = 'Observa'#231#227'o'
+          FocusControl = edtPES_OBSERVACAO
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object pnlTituloCadCliente: TPanel
+          Left = 0
+          Top = 0
+          Width = 1022
+          Height = 65
+          Align = alTop
+          BevelOuter = bvNone
+          Color = 14540253
+          ParentBackground = False
+          TabOrder = 0
+          object lblTituloCadastro: TLabel
+            Left = 13
+            Top = 14
+            Width = 207
+            Height = 30
+            Caption = 'Cadastro de clientes'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = 9408399
+            Font.Height = -21
+            Font.Name = 'Segoe UI Semilight'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+        end
+        object edtPES_CODIGO: TDBEdit
+          Left = 24
+          Top = 107
+          Width = 80
+          Height = 23
+          DataField = 'PES_CODIGO'
+          DataSource = DS_dados
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object edtPES_CNPJ: TDBEdit
+          Left = 110
+          Top = 107
+          Width = 180
+          Height = 23
+          CharCase = ecUpperCase
+          DataField = 'PES_CNPJ'
+          DataSource = DS_dados
+          TabOrder = 2
+        end
+        object edtPES_RAZAO: TDBEdit
+          Left = 296
+          Top = 107
+          Width = 400
+          Height = 23
+          CharCase = ecUpperCase
+          DataField = 'PES_RAZAO'
+          DataSource = DS_dados
+          TabOrder = 3
+        end
+        object edtPES_FANTASIA: TDBEdit
+          Left = 702
+          Top = 107
+          Width = 290
+          Height = 23
+          CharCase = ecUpperCase
+          DataField = 'PES_FANTASIA'
+          DataSource = DS_dados
+          TabOrder = 4
+        end
+        object edtPES_IERG: TDBEdit
+          Left = 24
+          Top = 171
+          Width = 200
+          Height = 23
+          CharCase = ecUpperCase
+          DataField = 'PES_IERG'
+          DataSource = DS_dados
+          TabOrder = 5
+        end
+        object edtPES_TELEFONE: TDBEdit
+          Left = 230
+          Top = 171
+          Width = 300
+          Height = 23
+          CharCase = ecUpperCase
+          DataField = 'PES_TELEFONE'
+          DataSource = DS_dados
+          TabOrder = 6
+        end
+        object edtPES_OBSERVACAO: TDBEdit
+          Left = 24
+          Top = 235
+          Width = 505
+          Height = 23
+          CharCase = ecUpperCase
+          DataField = 'PES_OBSERVACAO'
+          DataSource = DS_dados
+          TabOrder = 7
+        end
+      end
+    end
+  end
+  inherited DS_dados: TDataSource
+    DataSet = ServiceCadastro.QRY_Pessoas
+    Left = 824
+    Top = 40
+  end
+end

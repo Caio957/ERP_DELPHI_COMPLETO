@@ -1,0 +1,328 @@
+inherited ViewProdutos: TViewProdutos
+  Caption = 'ViewProdutos'
+  StyleElements = [seFont, seClient, seBorder]
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited lblTitulo: TLabel
+      Caption = 'Produtos'
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitWidth = 77
+    end
+    inherited pnlIcone: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited pnlFechar: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+  end
+  inherited pnlRodape: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+  end
+  inherited PanelLinhaFundo: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited CardPanel_Lista: TCardPanel
+      ActiveCard = Card_cadastro
+      StyleElements = [seFont, seClient, seBorder]
+      inherited Card_pesquisa: TCard
+        StyleElements = [seFont, seClient, seBorder]
+        inherited pnlTItuloPesquisa: TPanel
+          StyleElements = [seFont, seClient, seBorder]
+          inherited lblTituloPesquisa: TLabel
+            StyleElements = [seFont, seClient, seBorder]
+          end
+          inherited EdtPesquisa: TSearchBox
+            StyleElements = [seFont, seClient, seBorder]
+          end
+        end
+        inherited dbg_Dados: TDBGrid
+          Height = 215
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'PR1_CODIGO'
+              Title.Caption = 'C'#243'digo'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PR1_NOMECOMPLETO'
+              Title.Caption = 'Nome completo'
+              Width = 289
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PR1_NOMEPOPULAR'
+              Title.Caption = 'Nome popular'
+              Width = 287
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PR1_CODIGOBARRA'
+              Title.Caption = 'C'#243'digo Barras'
+              Width = 173
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PR1_REFERENCIA'
+              Title.Caption = 'Refer'#234'ncias'
+              Width = 190
+              Visible = True
+            end>
+        end
+        object pnlDetalhe: TPanel
+          Left = 0
+          Top = 325
+          Width = 1022
+          Height = 150
+          Align = alBottom
+          BevelOuter = bvNone
+          TabOrder = 2
+          object DBG_detalhe: TDBGrid
+            AlignWithMargins = True
+            Left = 5
+            Top = 5
+            Width = 1012
+            Height = 140
+            Cursor = crHandPoint
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Align = alClient
+            BorderStyle = bsNone
+            DataSource = DS_Produto2
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -12
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'PR2_FILIAL'
+                Title.Caption = 'Filial'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PR2_CUSTOINI'
+                Title.Caption = 'Custo inicial'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PR2_VENDAVISTA'
+                Title.Caption = 'Venda '#224' vista'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PR2_VENDAPRAZO'
+                Title.Caption = 'Venda a prazo'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'PR2_ESTOQUE'
+                Title.Caption = 'Estoque'
+                Visible = True
+              end>
+          end
+        end
+      end
+      inherited Card_cadastro: TCard
+        StyleElements = [seFont, seClient, seBorder]
+        ExplicitLeft = -40
+        ExplicitTop = -35
+        object Label1: TLabel
+          Left = 24
+          Top = 88
+          Width = 54
+          Height = 21
+          Caption = 'C'#243'digo'
+          FocusControl = DBEdit1
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label2: TLabel
+          Left = 192
+          Top = 88
+          Width = 209
+          Height = 21
+          Caption = 'Nome completo do produto'
+          FocusControl = DBEdit2
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 608
+          Top = 88
+          Width = 195
+          Height = 21
+          Caption = 'Nome popular do produto'
+          FocusControl = DBEdit3
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label4: TLabel
+          Left = 24
+          Top = 165
+          Width = 126
+          Height = 21
+          Caption = 'C'#243'digo de barras'
+          FocusControl = DBEdit4
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 244
+          Top = 165
+          Width = 85
+          Height = 21
+          Caption = 'Refer'#234'ncias'
+          FocusControl = DBEdit5
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label6: TLabel
+          Left = 608
+          Top = 165
+          Width = 37
+          Height = 21
+          Caption = 'NCM'
+          FocusControl = DBEdit6
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object pnlCadTitProdutos: TPanel
+          Left = 0
+          Top = 0
+          Width = 1022
+          Height = 65
+          Align = alTop
+          BevelOuter = bvNone
+          Color = 14540253
+          ParentBackground = False
+          TabOrder = 0
+          ExplicitTop = 8
+          object lblTituloCadastro: TLabel
+            Left = 13
+            Top = 14
+            Width = 220
+            Height = 30
+            Caption = 'Cadastro de produtos'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = 9408399
+            Font.Height = -21
+            Font.Name = 'Segoe UI Semilight'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+        end
+        object DBEdit1: TDBEdit
+          Left = 24
+          Top = 115
+          Width = 154
+          Height = 23
+          Cursor = crHandPoint
+          Color = clWhite
+          DataField = 'PR1_CODIGO'
+          DataSource = DS_dados
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object DBEdit2: TDBEdit
+          Left = 192
+          Top = 115
+          Width = 400
+          Height = 23
+          Cursor = crHandPoint
+          DataField = 'PR1_NOMECOMPLETO'
+          DataSource = DS_dados
+          TabOrder = 2
+        end
+        object DBEdit3: TDBEdit
+          Left = 608
+          Top = 115
+          Width = 390
+          Height = 23
+          Cursor = crHandPoint
+          DataField = 'PR1_NOMEPOPULAR'
+          DataSource = DS_dados
+          TabOrder = 3
+        end
+        object DBEdit4: TDBEdit
+          Left = 24
+          Top = 192
+          Width = 200
+          Height = 23
+          Cursor = crHandPoint
+          DataField = 'PR1_CODIGOBARRA'
+          DataSource = DS_dados
+          TabOrder = 4
+        end
+        object DBEdit5: TDBEdit
+          Left = 244
+          Top = 192
+          Width = 350
+          Height = 23
+          Cursor = crHandPoint
+          DataField = 'PR1_REFERENCIA'
+          DataSource = DS_dados
+          TabOrder = 5
+        end
+        object DBEdit6: TDBEdit
+          Left = 608
+          Top = 192
+          Width = 169
+          Height = 23
+          Cursor = crHandPoint
+          DataField = 'PR1_NCM'
+          DataSource = DS_dados
+          TabOrder = 6
+        end
+      end
+    end
+  end
+  inherited DS_dados: TDataSource
+    DataSet = ServiceCadastro.QRY_produto1
+    OnDataChange = DS_dadosDataChange
+    Left = 872
+    Top = 48
+  end
+  object DS_Produto2: TDataSource
+    DataSet = ServiceCadastro.QRY_produto2
+    Left = 960
+    Top = 49
+  end
+end

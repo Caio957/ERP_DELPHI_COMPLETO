@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/08/29 20:39:18.000.276,=C:\Users\alves\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/09/23 20:47:25.000.478,=C:\Users\alves\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/09/23 20:49:42.000.241,D:\Sistema Delphi\src\view\view.principal.pas=C:\Users\alves\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/09/23 20:49:42.000.241,D:\Sistema Delphi\src\view\view.principal.dfm=C:\Users\alves\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/09/23 20:51:04.000.924,D:\Sistema Delphi\ERPCurso.dproj=C:\Users\alves\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/10/01 21:06:09.000.505,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/01 21:07:17.000.013,D:\Sistema Delphi\src\services\Service.conexao.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/01 21:07:17.000.013,D:\Sistema Delphi\src\services\Service.conexao.dfm=D:\Sistema Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/10/01 22:08:09.000.987,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/01 22:08:41.000.563,D:\Sistema Delphi\src\services\Service.cadastro.dfm=D:\Sistema Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/10/01 22:08:41.000.563,D:\Sistema Delphi\src\services\Service.cadastro.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/01 22:22:30.000.391,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/01 22:23:11.000.620,D:\Sistema Delphi\src\providers\Provider.constants.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/01 22:35:15.000.881,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/01 22:35:51.000.610,D:\Sistema Delphi\src\view\view.base.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/01 22:35:51.000.610,D:\Sistema Delphi\src\view\view.base.dfm=D:\Sistema Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/10/06 12:11:06.000.968,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/06 12:11:41.000.176,D:\Sistema Delphi\src\view\view.base.listas.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/06 12:11:41.000.176,D:\Sistema Delphi\src\view\view.base.listas.dfm=D:\Sistema Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/10/06 13:09:33.000.756,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/06 13:10:00.000.492,D:\Sistema Delphi\src\view\view.clientes.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/06 13:10:00.000.492,D:\Sistema Delphi\src\view\view.clientes.dfm=D:\Sistema Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/10/07 21:16:27.000.570,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/07 21:17:10.000.054,D:\Sistema Delphi\Unit1.dfm=D:\Sistema Delphi\src\view\view.fornecedores.dfm</Transaction>
+    <Transaction>2024/10/07 21:17:10.000.054,D:\Sistema Delphi\Unit1.pas=D:\Sistema Delphi\src\view\view.fornecedores.pas</Transaction>
+    <Transaction>2024/10/08 22:36:48.000.636,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/08 22:37:08.000.771,D:\Sistema Delphi\Unit1.pas=D:\Sistema Delphi\src\providers\Provider.conversao.pas</Transaction>
+    <Transaction>2024/10/14 20:25:28.000.388,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/14 20:25:46.000.209,D:\Sistema Delphi\src\view\view.produtos.dfm=D:\Sistema Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/10/14 20:25:46.000.209,D:\Sistema Delphi\src\view\view.produtos.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/23 20:56:43.000.259,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/24 20:18:19.000.557,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/24 20:20:01.000.779,D:\Sistema Delphi\src\view\View.BaseLista2.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/24 20:20:01.000.779,D:\Sistema Delphi\src\view\View.BaseLista2.dfm=D:\Sistema Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/10/26 16:04:44.000.859,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/26 16:05:08.000.449,D:\Sistema Delphi\Unit1.pas=D:\Sistema Delphi\src\view\view.clientes2.pas</Transaction>
+    <Transaction>2024/10/26 16:05:08.000.449,D:\Sistema Delphi\Unit1.dfm=D:\Sistema Delphi\src\view\view.clientes2.dfm</Transaction>
+    <Transaction>2024/10/26 17:54:13.000.011,D:\Sistema Delphi\src\view\view.clientes.pas=</Transaction>
+    <Transaction>2024/10/26 17:55:52.000.568,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/26 17:56:49.000.370,D:\Sistema Delphi\Unit1.dfm=D:\Sistema Delphi\src\view\view.fornecedores2.dfm</Transaction>
+    <Transaction>2024/10/26 17:56:49.000.370,D:\Sistema Delphi\Unit1.pas=D:\Sistema Delphi\src\view\view.fornecedores2.pas</Transaction>
+    <Transaction>2024/10/26 18:29:56.000.293,D:\Sistema Delphi\src\view\view.fornecedores.pas=</Transaction>
+    <Transaction>2024/10/26 18:44:25.000.864,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/26 18:47:40.000.505,D:\Sistema Delphi\Unit1.dfm=D:\Sistema Delphi\src\view\view.produtos2.dfm</Transaction>
+    <Transaction>2024/10/26 18:47:40.000.505,D:\Sistema Delphi\Unit1.pas=D:\Sistema Delphi\src\view\view.produtos2.pas</Transaction>
+    <Transaction>2024/10/26 19:26:22.000.084,D:\Sistema Delphi\src\view\view.produtos.pas=</Transaction>
+    <Transaction>2024/10/28 20:45:46.000.201,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/28 20:55:34.000.569,D:\Sistema Delphi\src\view\view.Mensagens.dfm=D:\Sistema Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/10/28 20:55:34.000.569,D:\Sistema Delphi\src\view\view.Mensagens.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/29 20:26:06.000.982,=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/10/29 20:26:22.000.922,D:\Sistema Delphi\src\view\view.fundo.dfm=D:\Sistema Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/10/29 20:26:22.000.922,D:\Sistema Delphi\src\view\view.fundo.pas=D:\Sistema Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/11/02 11:05:53.000.040,D:\ERP_CursoDelphi\src\view\view.base.listas.pas=</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="src"/>
+    <File Path="src\providers"/>
+    <File Path="src\providers\Provider.constants.pas"/>
+    <File Path="src\providers\Provider.conversao.pas"/>
+    <File Path="src\services"/>
+    <File Path="src\services\Service.cadastro.pas"/>
+    <File Path="src\services\Service.cadastro.dfm"/>
+    <File Path="src\services\Service.conexao.pas"/>
+    <File Path="src\services\Service.conexao.dfm"/>
+    <File Path="src\view"/>
+    <File Path="src\view\view.base.pas"/>
+    <File Path="src\view\view.base.dfm"/>
+    <File Path="src\view\View.BaseLista2.pas"/>
+    <File Path="src\view\View.BaseLista2.dfm"/>
+    <File Path="src\view\view.principal.pas"/>
+    <File Path="src\view\view.principal.dfm"/>
+    <File Path="src\view\view.clientes2.pas"/>
+    <File Path="src\view\view.clientes2.dfm"/>
+    <File Path="src\view\view.fornecedores2.pas"/>
+    <File Path="src\view\view.fornecedores2.dfm"/>
+    <File Path="src\view\view.produtos2.pas"/>
+    <File Path="src\view\view.produtos2.dfm"/>
+    <File Path="src\view\view.Mensagens.pas"/>
+    <File Path="src\view\view.Mensagens.dfm"/>
+    <File Path="src\view\view.fundo.pas"/>
+    <File Path="src\view\view.fundo.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

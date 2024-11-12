@@ -1,0 +1,259 @@
+inherited ViewClientes2: TViewClientes2
+  Caption = 'ViewClientes2'
+  ClientHeight = 518
+  ClientWidth = 915
+  StyleElements = [seFont, seClient, seBorder]
+  ExplicitWidth = 915
+  ExplicitHeight = 518
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    Width = 915
+    StyleElements = [seFont, seClient, seBorder]
+    ExplicitWidth = 915
+    inherited lblTituloClientes: TLabel
+      Width = 804
+      Caption = 'Clientes'
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitWidth = 68
+    end
+    inherited pnlIcone: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited pnlFechar: TPanel
+      Left = 845
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitLeft = 845
+    end
+  end
+  inherited pnlRodape: TPanel
+    Top = 483
+    Width = 915
+    StyleElements = [seFont, seClient, seBorder]
+    ExplicitTop = 483
+    ExplicitWidth = 915
+    inherited btnNovo: TSpeedButton
+      Left = 415
+      ExplicitLeft = 415
+    end
+    inherited btnCancelar: TSpeedButton
+      Left = 615
+      ExplicitLeft = 615
+    end
+    inherited btnSalvar: TSpeedButton
+      Left = 715
+      ExplicitLeft = 715
+    end
+    inherited btnExcluir: TSpeedButton
+      Left = 815
+      ExplicitLeft = 815
+    end
+    inherited btnEditar: TSpeedButton
+      Left = 515
+      ExplicitLeft = 515
+    end
+  end
+  inherited pnlLinhaDeFundo: TPanel
+    Width = 915
+    Height = 448
+    StyleElements = [seFont, seClient, seBorder]
+    ExplicitWidth = 915
+    ExplicitHeight = 448
+    inherited CardPanel_Listas: TCardPanel
+      Width = 911
+      Height = 448
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitWidth = 911
+      ExplicitHeight = 448
+      inherited Card_Pesquisa: TCard
+        Width = 909
+        Height = 446
+        StyleElements = [seFont, seClient, seBorder]
+        ExplicitWidth = 909
+        ExplicitHeight = 446
+        inherited pnlTituloPesquisa: TPanel
+          Width = 909
+          StyleElements = [seFont, seClient, seBorder]
+          ExplicitWidth = 909
+          inherited lblTituloPesquisa: TLabel
+            StyleElements = [seFont, seClient, seBorder]
+          end
+          inherited edt_Pesquisa: TSearchBox
+            StyleElements = [seFont, seClient, seBorder]
+          end
+        end
+        inherited DBG_dados: TDBGrid
+          Width = 899
+          Height = 355
+          DataSource = dsDados
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'PES_CODIGO'
+              Title.Caption = 'C'#243'digo'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_RAZAO'
+              Title.Caption = 'Nome do cliente'
+              Width = 300
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_TELEFONE'
+              Title.Caption = 'Telefone'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_CNPJ'
+              Title.Caption = 'CPF / CNPJ'
+              Visible = True
+            end>
+        end
+      end
+      inherited Card_Cadastro: TCard
+        Width = 909
+        Height = 446
+        StyleElements = [seFont, seClient, seBorder]
+        ExplicitWidth = 909
+        ExplicitHeight = 446
+        object Label1: TLabel [0]
+          Left = 16
+          Top = 80
+          Width = 39
+          Height = 15
+          Caption = 'C'#243'digo'
+          FocusControl = DBEdit1
+        end
+        object Label2: TLabel [1]
+          Left = 92
+          Top = 80
+          Width = 88
+          Height = 15
+          Caption = 'Nome do cliente'
+          FocusControl = DBEdit2
+        end
+        object Label3: TLabel [2]
+          Left = 448
+          Top = 80
+          Width = 44
+          Height = 15
+          Caption = 'Telefone'
+          FocusControl = DBEdit3
+        end
+        object Label4: TLabel [3]
+          Left = 654
+          Top = 80
+          Width = 59
+          Height = 15
+          Caption = 'CPF / CNPJ'
+          FocusControl = DBEdit4
+        end
+        object Label5: TLabel [4]
+          Left = 16
+          Top = 136
+          Width = 79
+          Height = 15
+          Caption = 'Nome Fantasia'
+          FocusControl = DBEdit5
+        end
+        object Label6: TLabel [5]
+          Left = 322
+          Top = 136
+          Width = 94
+          Height = 15
+          Caption = 'Inscri'#231#227'o Estadual'
+          FocusControl = DBEdit6
+        end
+        object Label7: TLabel [6]
+          Left = 16
+          Top = 196
+          Width = 62
+          Height = 15
+          Caption = 'Observa'#231#227'o'
+          FocusControl = DBEdit7
+        end
+        object DBEdit1: TDBEdit [7]
+          Left = 16
+          Top = 96
+          Width = 70
+          Height = 23
+          DataField = 'PES_CODIGO'
+          DataSource = dsDados
+          Enabled = False
+          TabOrder = 0
+        end
+        object DBEdit2: TDBEdit [8]
+          Left = 92
+          Top = 96
+          Width = 350
+          Height = 23
+          DataField = 'PES_RAZAO'
+          DataSource = dsDados
+          TabOrder = 1
+        end
+        object DBEdit3: TDBEdit [9]
+          Left = 448
+          Top = 96
+          Width = 200
+          Height = 23
+          DataField = 'PES_TELEFONE'
+          DataSource = dsDados
+          TabOrder = 2
+        end
+        object DBEdit4: TDBEdit [10]
+          Left = 654
+          Top = 96
+          Width = 215
+          Height = 23
+          DataField = 'PES_CNPJ'
+          DataSource = dsDados
+          TabOrder = 3
+        end
+        object DBEdit5: TDBEdit [11]
+          Left = 16
+          Top = 152
+          Width = 300
+          Height = 23
+          DataField = 'PES_FANTASIA'
+          DataSource = dsDados
+          TabOrder = 4
+        end
+        object DBEdit6: TDBEdit [12]
+          Left = 322
+          Top = 152
+          Width = 154
+          Height = 23
+          DataField = 'PES_IERG'
+          DataSource = dsDados
+          TabOrder = 5
+        end
+        object DBEdit7: TDBEdit [13]
+          Left = 16
+          Top = 212
+          Width = 500
+          Height = 23
+          DataField = 'PES_OBSERVACAO'
+          DataSource = dsDados
+          TabOrder = 6
+        end
+        inherited pnlTituloCadCli: TPanel
+          Width = 909
+          TabOrder = 7
+          StyleElements = [seFont, seClient, seBorder]
+          ExplicitTop = 0
+          ExplicitWidth = 909
+          inherited lblCadTitulo: TLabel
+            StyleElements = [seFont, seClient, seBorder]
+          end
+        end
+      end
+    end
+  end
+  inherited dsDados: TDataSource
+    DataSet = ServiceCadastro.QRY_Pessoas
+    Left = 856
+  end
+end

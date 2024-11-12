@@ -1,0 +1,278 @@
+unit view.base.listas;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  view.base,
+  Vcl.ExtCtrls,
+  Vcl.Buttons,
+  Vcl.StdCtrls,
+  Vcl.WinXPanels,
+  Vcl.WinXCtrls,
+  Data.DB,
+  Vcl.Grids,
+  Vcl.DBGrids;
+
+type
+  TViewBaseListas = class(TViewBase)
+    pnlTopo: TPanel;
+    pnlRodape: TPanel;
+    pnlIcone: TPanel;
+    imgIcone: TImage;
+    pnlFechar: TPanel;
+    SpeedButton1: TSpeedButton;
+    lblTitulo: TLabel;
+    btnNovo: TSpeedButton;
+    btnEditar: TSpeedButton;
+    btnCancelar: TSpeedButton;
+    btnExcluir: TSpeedButton;
+    btnSalvar: TSpeedButton;
+    PanelLinhaFundo: TPanel;
+    CardPanel_Lista: TCardPanel;
+    Card_pesquisa: TCard;
+    Card_cadastro: TCard;
+    pnlTItuloPesquisa: TPanel;
+    lblTituloPesquisa: TLabel;
+    EdtPesquisa: TSearchBox;
+    dbg_Dados: TDBGrid;
+    DS_dados: TDataSource;
+
+    procedure SpeedButton1Click(Sender: TObject);
+
+    procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+
+    procedure pnlTopoMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+
+    procedure FormShow(Sender: TObject);
+    procedure CardPanel_ListaCardChange(Sender: TObject; PrevCard,
+      NextCard: TCard);
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+  private
+
+  public
+  var sTELA: string;
+  end;
+
+var
+  ViewBaseListas: TViewBaseListas;
+
+
+implementation
+
+
+uses Service.cadastro, Provider.constants, Provider.conversao;
+
+
+
+
+
+procedure TViewBaseListas.btnCancelarClick(Sender: TObject);
+begin //cancelar
+  inherited;
+  if DS_dados.DataSet.State in dsEditModes then
+  DS_dados.DataSet.Cancel;
+  CardPanel_Lista.ActiveCard := Card_pesquisa;
+end;
+
+procedure TViewBaseListas.btnEditarClick(Sender: TObject);
+begin //Editar
+  inherited;
+  CardPanel_Lista.ActiveCard := Card_cadastro;
+  DS_dados.DataSet.Edit;
+end;
+
+procedure TViewBaseListas.btnExcluirClick(Sender: TObject);
+begin //excluir
+  inherited;
+  if DS_dados.DataSet.RecordCount > 0 then
+  begin
+
+      DS_dados.DataSet.Delete;
+
+      if self.Tag > 0 then
+      begin
+
+          case Self.Tag of
+
+            1: begin
+              ShowMessage('Cliente deleteado com sucesso!');
+            end;
+
+            2: begin
+              ShowMessage('Fonecedor deleteado com sucesso!');
+            end;
+
+            3: begin
+              ShowMessage('Funcionário deleteado com sucesso!');
+            end;
+
+          end;
+
+      end
+
+      else
+      begin
+
+          if sTELA = TelasToStr(tpProdutos) then
+            begin
+                ShowMessage('Produto deletado com sucesso!')
+            end;                                                  //Aqui eu implemento os tipos de telas para passar automaticamente
+                                                                  //Para não generelizar a mensagem de exclusão
+            if sTELA = TelasToStr(tpCaixa) then
+            begin
+                ShowMessage('Caixa deletado com sucesso!')
+            end;
+
+            if sTELA = TelasToStr(tpGrupo) then
+            begin
+                ShowMessage('Grupo deletado com sucesso!')
+            end;
+
+            if sTELA = TelasToStr(tpSubgrupo) then
+            begin
+                ShowMessage('Subgrupo deletado com sucesso!')
+            end;
+
+      end;
+
+
+  CardPanel_Lista.ActiveCard := Card_pesquisa;
+  end;
+end;
+
+procedure TViewBaseListas.btnNovoClick(Sender: TObject);
+begin  //novo
+  inherited;
+  CardPanel_Lista.ActiveCard := Card_cadastro;
+  DS_dados.DataSet.Insert;
+end;
+
+procedure TViewBaseListas.btnSalvarClick(Sender: TObject);
+begin //salvar
+  inherited;
+
+    if DS_dados.DataSet.State in dsEditModes then
+    begin
+
+      if self.tag > 0 then
+      begin
+
+        ServiceCadastro.QRY_PessoasPES_TIPOPESSOA.AsInteger := Self.Tag;
+        ServiceCadastro.QRY_Pessoas.Post;
+
+          case self.Tag of  //Aqui tenho um caso de Switch/Case
+
+            1: begin
+               ShowMessage('Cliente salvo com sucesso!');
+            end;
+
+            2: begin                                                       //Aqui neste código, fizemos a refatoração do código que foi feito para cada
+               ShowMessage('Fornecedor salvo com sucesso!');               //tela, clientes e fornecedores.
+            end;                                                           //Aula 13 do módulo 2(DelphiGOV);
+
+            3: begin
+               ShowMessage('Funcionário salvo com sucesso!');
+            end;
+
+        end;
+
+
+    end
+
+    else
+      begin
+
+          DS_dados.DataSet.Post;
+
+            if sTELA = TelasToStr(tpProdutos) then
+            begin
+                ShowMessage('Produto salvo com sucesso!')
+            end;                                                  //Aqui eu implemento os tipos de telas para passar automaticamente
+                                                                  //Para não generelizar a mensagem de salvamento
+            if sTELA = TelasToStr(tpCaixa) then
+            begin
+                ShowMessage('Caixa salvo com sucesso!')
+            end;
+
+            if sTELA = TelasToStr(tpGrupo) then
+            begin
+                ShowMessage('Grupo salvo com sucesso!')
+            end;
+
+            if sTELA = TelasToStr(tpSubgrupo) then
+            begin
+                ShowMessage('Subgrupo salvo com sucesso!')
+            end;
+
+
+      end;
+
+
+      CardPanel_Lista.ActiveCard := Card_pesquisa;
+
+  end;
+
+end;
+
+procedure TViewBaseListas.CardPanel_ListaCardChange(Sender: TObject; PrevCard,
+  NextCard: TCard);
+begin
+  inherited;
+  if CardPanel_Lista.ActiveCard = Card_cadastro then
+  begin
+    SelectFirst;
+  end;
+end;
+
+procedure TViewBaseListas.FormMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+    const
+   sc_DragMove = $f012;
+begin
+  ReleaseCapture;
+  Perform(wm_SysCommand, sc_DragMove, 0);
+end;
+end;
+
+procedure TViewBaseListas.FormShow(Sender: TObject);
+begin
+  inherited;
+  CardPanel_Lista.ActiveCard := Card_pesquisa;
+  GET_Pessoas(self.Tag);
+end;
+
+procedure TViewBaseListas.pnlTopoMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+begin
+  inherited;
+  const
+   sc_DragMove = $f012;
+begin
+  ReleaseCapture;
+  Perform(wm_SysCommand, sc_DragMove, 0);
+end;
+end;
+
+procedure TViewBaseListas.SpeedButton1Click(Sender: TObject);
+begin
+  inherited;
+    self.close;
+end;
+
+end.

@@ -1,0 +1,94 @@
+inherited ViewFornecedores2: TViewFornecedores2
+  Caption = 'ViewFornecedores2'
+  StyleElements = [seFont, seClient, seBorder]
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited lblTituloClientes: TLabel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited pnlIcone: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited pnlFechar: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+  end
+  inherited pnlRodape: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+  end
+  inherited pnlLinhaDeFundo: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited CardPanel_Listas: TCardPanel
+      StyleElements = [seFont, seClient, seBorder]
+      inherited Card_Pesquisa: TCard
+        StyleElements = [seFont, seClient, seBorder]
+        inherited pnlTituloPesquisa: TPanel
+          StyleElements = [seFont, seClient, seBorder]
+          inherited lblTituloPesquisa: TLabel
+            StyleElements = [seFont, seClient, seBorder]
+          end
+          inherited edt_Pesquisa: TSearchBox
+            StyleElements = [seFont, seClient, seBorder]
+          end
+        end
+        inherited DBG_dados: TDBGrid
+          Color = clWhite
+          DataSource = dsDados
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'PES_CODIGO'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              Title.Caption = 'C'#243'digo'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_RAZAO'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              Title.Caption = 'Nome do fornecedor'
+              Width = 300
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_TELEFONE'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              Title.Caption = 'Telefone'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_CNPJ'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              Title.Caption = 'CPF/CNPJ'
+              Visible = True
+            end>
+        end
+      end
+      inherited Card_Cadastro: TCard
+        StyleElements = [seFont, seClient, seBorder]
+      end
+    end
+  end
+  inherited dsDados: TDataSource
+    DataSet = ServiceCadastro.QRY_Pessoas
+  end
+end
